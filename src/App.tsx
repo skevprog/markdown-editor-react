@@ -1,29 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import MarkedInput from './components/MarkedInput';
+
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282c34;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 3em;
+`;
+
+const Title = styled.h1`
+  font-weight: 700;
+  margin-bottom: 1em;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Title>Markdown Editor</Title>
+      <MarkedInput />
+    </AppContainer>
   );
 }
 
